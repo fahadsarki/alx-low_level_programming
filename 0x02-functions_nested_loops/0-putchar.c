@@ -8,5 +8,5 @@
 int main(void)
 {
 	write(1, "_putchar\n", 9);
-	return (1);
+	return (0);
 }
