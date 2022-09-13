@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10 - prints 10 times the alphabet, in lowercase, followed by a new line
+ * print_alphabet_x10 - print alpha 10 times
  * Return: void
  */
 void print_alphabet_x10(void)
 {
 	int a;
 
-	for (a = 0; a <= 10; a++)
+	for (a = 0; a <= 9; a++)
 	{
 		char b;
 
