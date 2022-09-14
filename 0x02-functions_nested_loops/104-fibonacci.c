@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 /**
 * main - Prints first 89 numbers of the fibonacci
