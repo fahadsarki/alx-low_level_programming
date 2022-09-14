@@ -7,7 +7,7 @@
 int main(void)
 {
 	int i, l;
-	unsigned int a, b, c;
+	long a, b, c;
 
 	a = 1;
 	b = 2;
