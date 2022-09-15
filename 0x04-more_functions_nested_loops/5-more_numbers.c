@@ -1,7 +1,6 @@
 #include "main.h"
-
 /**
- * more_numbers - Print 10x the numbers 0-14 
+ * more_numbers - Print 10x the numbers 0-14
  * Return: 10 times numbers 0-14
 */
 
@@ -17,6 +16,7 @@ void more_numbers(void)
 			{
 				_putchar((j / 10) + '0');
 			}
+
 			_putchar((j % 10) + '0');
 		}
 
