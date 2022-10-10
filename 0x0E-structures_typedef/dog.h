@@ -2,9 +2,9 @@
 #define _DOG_H_
 /**
  * struct dog - structure for dog with elements
- * @name - name of dog
- * @age - age of dog
- * @owner - owner of dog
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: owner of dog
 */
 struct dog 
 {
