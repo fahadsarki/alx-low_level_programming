@@ -1,6 +1,7 @@
 #ifndef DOG
 #define DOG
 /**
+ * struct dog - structure for dog with elements
  * @name - name of dog
  * @age - age of dog
  * @owner - owner of dog
@@ -11,4 +12,5 @@ struct dog
 	float age;
 	char *owner;
 };
+typedef struct dog dog_t;
 #endif
