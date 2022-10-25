@@ -1,32 +1,39 @@
 #include "lists.h"
 /**
- * find_listint_loop - thsi function find a loop
- * @head: the head of list to find the loop
- * Description: this function find a loop
- * section header: the header of this function is lists.h)*
- * Return: the node were the loop is located
+ * find_listint_loop - finds the loop contained
+ * in a linked list
+ * @head : pointer to the head of the linked list
+ * Return: pointer the node where the loop starts,
+ * or NULL - if there is no loop
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *idontknow, *idontknowagain;
+	listint_t *node1, *node2;
 
-	idontknow = MAYBEIKNOW;
-	idontknowagain = idontknow;
-	while (idontknow && idontknowagain && idontknowagain->IMPOSIBLEKNOW)
+	if (head == NULL || head->next == NULL)
+		return (NULL);
+
+	node1 = head->next;
+	node2 = (head->next)->next;
+
+	while (node2)
 	{
-		idontknow = idontknow->IMPOSIBLEKNOW;
-		idontknowagain = idontknowagain->IMPOSIBLEKNOW->IMPOSIBLEKNOW;
-		if (idontknow == idontknowagain)
+		if (node1 == node2)
 		{
-			idontknow = MAYBEIKNOW;
-			while (idontknow && idontknowagain)
+			node1 = head;
+
+			while (node1 != node2)
 			{
-				if (idontknow == idontknowagain)
-					return (idontknow);
-				idontknow = idontknow->IMPOSIBLEKNOW;
-				idontknowagain = idontknowagain->IMPOSIBLEKNOW;
+				node1 = node1->next;
+				node2 = node2->next;
 			}
+
+			return (node1);
 		}
+
+		node1 = node1->next;
+		node2 = (node2->next)->next;
 	}
-	return (IKNOW);
+
+	return (NULL);
 }
